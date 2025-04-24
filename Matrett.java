@@ -15,6 +15,7 @@ public class Matrett{
             System.err.println("skriv en til! ");
             ing = scanner.nextLine();
         }
+      //  scanner.close();
     }
 
     public void leggTilIngrediens(String i){
@@ -43,12 +44,12 @@ public class Matrett{
 
     @Override
     public String toString(){
-        String tekst = navn + "ingredienser:";
+        String tekst = navn + " ingredienser:";
 
         for(String ing: ingrediens){
             tekst += "\n" + ing; 
         }
-        
+        tekst += "\n";
         return tekst;
     }
     
