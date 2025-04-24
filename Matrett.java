@@ -12,7 +12,7 @@ public class Matrett{
         String ing = scanner.nextLine();
         while(ing != "" && ing != "stop"){
             ingrediens.add(ing);
-            System.err.println("skriv en til! ");
+            System.err.println("\n" + ing +"er lagt til!\nlegg til en til eller trykk enter nor du er ferdig:)");
             ing = scanner.nextLine();
         }
       //  scanner.close();
