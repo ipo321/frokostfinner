@@ -18,7 +18,7 @@ public class Matrett{
       //  scanner.close();
     }
 
-    public void leggTilIngrediens(String i){
+    public void leggTilIngrediens(String i){//legger til ingredienser.
         ingrediens.add(i);
     }
 
@@ -40,6 +40,7 @@ public class Matrett{
     public ArrayList<String> hentIngredienser(){
         return ingrediens;
     }
+
 
 
     @Override
