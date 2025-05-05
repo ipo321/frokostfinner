@@ -8,12 +8,12 @@ public class MatFinner {
     //setter beholdningen man har.
     public void settBeholdning(){
         Scanner scanner = new Scanner(System.in);
-        System.err.println("skriv inn en ingrediensene du har! (skriv ¨stop¨ når du er ferdig. )");
+        System.out.println("skriv inn en ingrediensene du har! (skriv ¨stop¨ når du er ferdig. )");
         String ingrediens = scanner.nextLine();
 
         while(ingrediens != "" && ingrediens != "stop"){
             beholdning.add(ingrediens);
-            System.err.println("flere ingredienser? hvis ikke trykk enter. ");
+            System.out.println("flere ingredienser? hvis ikke trykk enter. ");
             ingrediens = scanner.nextLine();
         }
         System.out.println();
