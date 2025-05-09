@@ -7,11 +7,17 @@ import java.util.ArrayList;
 public class MatGui {
     MatFinner matfinner;
     JFrame vindu;
-    JPanel panel;
-    JButton jaKnapp;
-    JButton neste;
+
+    //panel for ingredienser
+    JPanel ingrediensPanel;
+    JButton legTilIngrediens;
+    JTextField ingrediensInput;
+
+    //panel for matretter
+    JButton leggTilMat;
+    JPanel matPanel;
     
-    JTextField tekst;
+    JTextField matInput;
 
     MatGui(){
         lagvindu();
@@ -24,17 +30,28 @@ public class MatGui {
     public void lagvindu(){
         try { UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());   
         } catch (Exception e) { System.exit(1); }
+
         vindu = new JFrame("matfinner");
-        panel = new JPanel();
-        jaKnapp = new JButton("JA");
-        neste = new JButton("neste");
-        tekst = //finn ut hvordan man får systemoutprint på skjerm. 
+
+        
+        ingrediensPanel = new JPanel();
+        legTilIngrediens = new JButton("legg til ingrediens: ");
+        ingrediensInput = new JTextField(" ");
+        ingrediensPanel.add(legTilIngrediens);
+        ingrediensPanel.add(ingrediensInput);
+        
+        
+        matPanel = new JPanel();//lager panel for mat inputt
+        leggTilMat = new JButton("legg til matrett");
+        matInput = new JTextField(" ");
+        matPanel.add(leggTilMat);
+        matPanel.add(matInput);
+
         vindu.setPreferredSize(new Dimension(300, 200));//
 
-        vindu.add(panel);
-        panel.add(jaKnapp);
-        panel.add(neste);
-        
+        vindu.add(matPanel);
+        vindu.add(ingrediensPanel);
+
         vindu.setLocationRelativeTo(null);
         vindu.pack();
         vindu.setVisible(true);
@@ -45,6 +62,12 @@ public class MatGui {
 
 
     }
+
+    public void leggTilMatrett(String rett){
+
+    }
+
+
 
 
     private class Trykk implements ActionListener{

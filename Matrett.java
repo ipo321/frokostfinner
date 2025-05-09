@@ -5,17 +5,26 @@ public class Matrett{
     ArrayList<String> ingrediens = new ArrayList<>();
 
     public Matrett(String navn){
-        this.navn = navn;
-        Scanner scanner = new Scanner(System.in);
+        // this.navn = navn;
+        // Scanner scanner = new Scanner(System.in);
 
-        System.err.println("skriv inn en ingrediense i matretten! (trykk enter nor du er ferdig)");
-        String ing = scanner.nextLine();
-        while(ing != "" && ing != "stop"){
-            ingrediens.add(ing);
-            System.err.println("\n" + ing +"er lagt til!\nlegg til en til eller trykk enter nor du er ferdig:)");
-            ing = scanner.nextLine();
-        }
+        // System.err.println("skriv inn en ingrediense i matretten! (trykk enter nor du er ferdig)");
+        // String ing = scanner.nextLine();
+        // while(ing != "" && ing != "stop"){
+        //     ingrediens.add(ing);
+        //     System.err.println("\n" + ing +"er lagt til!\nlegg til en til eller trykk enter nor du er ferdig:)");
+        //     ing = scanner.nextLine();
+        //}
+        this.navn = navn;
       //  scanner.close();
+    }
+
+    public void guiMatrettNavn(String matrett){
+        navn = matrett;
+    }
+
+    public void guiLeggTilIngrediens(String ing){
+        ingrediens.add(ing);
     }
 
     public void leggTilIngrediens(String i){//legger til ingredienser.

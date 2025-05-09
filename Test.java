@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) {
-        MatGui finner = new MatGui();
+        GUIgpt finner = new GUIgpt();
         
     }
     
